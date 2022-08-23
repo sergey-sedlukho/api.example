@@ -1,0 +1,34 @@
+### GET all users
+GET http://localhost:8080/api/users/all
+Accept: application/json
+
+### create user
+PUT http://localhost:8080/api/users/create
+Content-Type: application/json
+
+{
+  "name": "new_user_name"
+}
+
+### update user
+PUT http://localhost:8080/api/users/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "updated_name"
+}
+
+### DELETE user
+DELETE http://localhost:8080/api/users/delete/1
+Accept: application/json
+
+### update admin status
+PUT http://localhost:8080/api/users/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "updated_name"
+}
+

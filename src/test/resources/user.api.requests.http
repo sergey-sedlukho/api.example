@@ -1,0 +1,55 @@
+### GET all customers
+GET http://localhost:8080/api/customers/all
+Accept: application/json
+
+### create customer
+PUT http://localhost:8080/api/customers/create
+Content-Type: application/json
+
+{
+  "name": "new_user_name",
+  "surname": "new_user_surname"
+}
+
+### update customer
+PUT http://localhost:8080/api/customers/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "updated_name",
+  "surname": "updated_surname"
+}
+
+### create customer, incorrect data
+PUT http://localhost:8080/api/customers/create
+Content-Type: application/json
+
+{
+  "surname": "new_user_surname"
+}
+
+### DELETE customer
+DELETE http://localhost:8080/api/customers/delete/1
+Accept: application/json
+
+
+### DELETE customer, incorrect data
+DELETE http://localhost:8080/api/customers/delete/15
+Accept: application/json
+
+
+### upload customer photo
+POST http://localhost:8080/api/customers/1/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="photo"; filename="img.jpg"
+Content-Type: image/jpeg
+
+< ./img.jpg
+--WebAppBoundary--
+
+
+### GET customer upload
+GET http://localhost:8080/api/customers/1/photo
