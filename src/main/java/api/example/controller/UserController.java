@@ -35,8 +35,8 @@ public class UserController {
     private final DocumentService documentService;
     private final FactoryService factoryService;
 
-    public UserController(CustomerRepository customerRepository, UserRepository userRepository, DocumentService documentService,
-                          FactoryService factoryService) {
+    public UserController(CustomerRepository customerRepository, UserRepository userRepository,
+                          DocumentService documentService, FactoryService factoryService) {
         this.customerRepository = customerRepository;
         this.userRepository = userRepository;
         this.documentService = documentService;
